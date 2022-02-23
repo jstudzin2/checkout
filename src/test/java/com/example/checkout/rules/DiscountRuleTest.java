@@ -2,6 +2,7 @@ package com.example.checkout.rules;
 
 import com.example.checkout.BaseTest;
 import com.example.checkout.model.Item;
+import com.example.checkout.rules.impl.DiscountRule;
 import org.junit.Assert;
 import org.junit.Test;
 

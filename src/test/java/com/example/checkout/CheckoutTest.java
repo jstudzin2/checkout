@@ -1,8 +1,8 @@
 package com.example.checkout;
 
 import com.example.checkout.model.Checkout;
-import com.example.checkout.rules.DiscountRule;
-import com.example.checkout.rules.OnePoundPerItemDiscount;
+import com.example.checkout.rules.impl.DiscountRule;
+import com.example.checkout.rules.impl.OnePoundPerItemDiscount;
 import org.junit.Assert;
 import org.junit.Test;
 

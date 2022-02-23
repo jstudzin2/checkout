@@ -1,6 +1,7 @@
-package com.example.checkout.rules;
+package com.example.checkout.rules.impl;
 
 import com.example.checkout.model.Item;
+import com.example.checkout.rules.PromotionRule;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

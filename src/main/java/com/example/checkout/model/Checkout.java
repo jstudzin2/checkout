@@ -1,6 +1,6 @@
 package com.example.checkout.model;
 
-import com.example.checkout.rules.NoDiscountRule;
+import com.example.checkout.rules.impl.NoDiscountRule;
 import com.example.checkout.rules.PromotionRule;
 
 import java.math.BigDecimal;
