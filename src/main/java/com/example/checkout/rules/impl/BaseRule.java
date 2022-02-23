@@ -20,13 +20,4 @@ public class BaseRule {
         return totalPrice.subtract(discount);
     }
 
-    protected void validateInputData(List<Item> items) {
-        Stream.of(items)
-                .flatMap(Collection::stream)
-                .map(Item::getProductPrice).forEach(price -> {
-                    if (price == null || price.compareTo(BigDecimal.ZERO) < 0) {
-                        throw new IllegalArgumentException();
-                    }
-                });
-    }
 }

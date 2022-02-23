@@ -1,7 +1,7 @@
 package com.example.checkout.model;
 
-import com.example.checkout.rules.impl.NoDiscountRule;
 import com.example.checkout.rules.PromotionRule;
+import com.example.checkout.rules.impl.NoDiscountRule;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -28,6 +28,7 @@ public class Checkout {
     }
 
     public BigDecimal total() {
+        this.strategy.validateInputData(this.items);
         return this.strategy.apply(this.items);
     }
 }

@@ -29,7 +29,7 @@ public class DiscountRuleTest extends BaseTest {
     }
 
     @Test
-    public void discount_should_not_be_applied() {
+    public void discount_should_not_be_applied_amount_is_less_than_treshold() {
         //given
         List<Item> items = Stream.of(ITEM_1).collect(Collectors.toList());
 
@@ -41,13 +41,4 @@ public class DiscountRuleTest extends BaseTest {
 
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void when_price_is_not_provided_exception_should_be_thrown() {
-        //given
-        List<Item> items = Stream.of(ITEM_4).collect(Collectors.toList());
-
-        //when
-        rule.apply(items);
-
-    }
 }

@@ -15,8 +15,6 @@ public class DiscountRule extends BaseRule implements PromotionRule {
     @Override
     public BigDecimal apply(List<Item> items) {
 
-        validateInputData(items);
-
         BigDecimal totalPrice = calculateTotalPrice(items);
 
         if (totalPrice.compareTo(DISCOUNT_TRESHOLD) > 0) {

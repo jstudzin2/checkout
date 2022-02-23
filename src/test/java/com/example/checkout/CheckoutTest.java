@@ -82,4 +82,15 @@ public class CheckoutTest extends BaseTest {
         //then
         Assert.assertNotEquals(totalPriceOne, totalPriceTwo);
     }
+
+
+    @Test(expected = IllegalArgumentException.class)
+    public void when_price_is_not_provided_exception_should_be_thrown() {
+        //given
+        Checkout checkout = new Checkout(null);
+        checkout.scan(ITEM_4);
+
+        //when
+        checkout.total();
+    }
 }
