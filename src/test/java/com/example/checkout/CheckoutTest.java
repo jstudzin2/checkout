@@ -93,4 +93,19 @@ public class CheckoutTest extends BaseTest {
         //when
         checkout.total();
     }
+
+    @Test
+    public void should_be_possible_to_add_items_after_total_calculation() {
+        //given
+        Checkout checkout = new Checkout(new DiscountRule());
+        checkout.scan(ITEM_1);
+        BigDecimal totalPrice1 = checkout.total();
+
+        //when
+        checkout.scan(ITEM_2);
+        BigDecimal totalPrice2 = checkout.total();
+
+        //then
+        Assert.assertEquals(totalPrice2, ITEM_1.getProductPrice().add(ITEM_2.getProductPrice()));
+    }
 }
